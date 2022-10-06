@@ -24,6 +24,7 @@ const Attribute = ({ optionArr }) => {
       {Object.values(arr).map((item) => {
         if (item.disabled) {
           return (
+            <div key={item.label}>
             <Page><TextField
               label={item.label}
               labelAction={{
@@ -32,7 +33,7 @@ const Attribute = ({ optionArr }) => {
                   changeData(item.label);
                 },
               }}
-            /></Page>
+            /></Page></div>
           );
         }
       })}
